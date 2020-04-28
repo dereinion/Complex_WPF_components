@@ -63,6 +63,11 @@
            
             </ToolBar>
         </ToolBarTray>
+        <StatusBar Name="StatusBar" DockPanel.Dock="Bottom" Visibility="Visible">
+            <StatusBarItem>
+                <TextBlock Name="lblCursorPosition" />
+            </StatusBarItem>
+        </StatusBar>
 
 
         <TextBox AcceptsReturn="True" Name="TxtEditor" SelectionChanged="TxtEditor_SelectionChanged" >
@@ -82,11 +87,6 @@
                 </ContextMenu>
             </TextBox.ContextMenu>
         </TextBox>
-        <StatusBar Name="StatusBar" DockPanel.Dock="Bottom" Visibility="Collapsed">
-            <StatusBarItem>
-                <TextBlock Name="lblCursorPosition" />
-            </StatusBarItem>
-        </StatusBar>
     </DockPanel>
     
 </Window>
