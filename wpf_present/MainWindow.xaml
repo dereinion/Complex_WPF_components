@@ -54,10 +54,10 @@
                     <Image Source="D:\Projects .cs\wpf_present\wpf_present\icons\folder.png" />
                 </Button>
                 <Button ToolTip="Save">
-                    <Image Source="C:\Users\HP\Source\Repos\Complex_WPF_components\wpf_present\icons\save.png" />
+                    <Image Source="D:\Projects .cs\wpf_present\wpf_present\icons\save.png" />
                 </Button>
                 <Button ToolTip="Cut">
-                    <Image Source="C:\Users\HP\Source\Repos\Complex_WPF_components\wpf_present\icons\cut.png" />
+                    <Image Source="D:\Projects .cs\wpf_present\wpf_present\icons\cut.png" />
                 </Button>
            
             </ToolBar>
@@ -69,7 +69,7 @@
                 <ContextMenu>
                   <MenuItem Command="Cut">
                        <MenuItem.Icon>
-                            <Image Source="C:\Users\HP\Source\Repos\Complex_WPF_components\wpf_present\icons\cut.png" />
+                            <Image Source="D:\Projects .cs\wpf_present\wpf_present\icons\cut.png" />
                        </MenuItem.Icon>
                  </MenuItem>
                     <MenuItem Command="Copy"/>
