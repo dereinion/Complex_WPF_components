@@ -18,6 +18,7 @@
     <Window.CommandBindings>
         <CommandBinding Command="New" CanExecute="NewCommand_CanExecute" Executed="NewCommand_Executed" />
     </Window.CommandBindings>
+    
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
@@ -81,12 +82,11 @@
                 </ContextMenu>
             </TextBox.ContextMenu>
         </TextBox>
-   <StatusBar Name="StatusBar" DockPanel.Dock="Bottom" Visibility="Collapsed">
+        <StatusBar Name="StatusBar" DockPanel.Dock="Bottom" Visibility="Collapsed">
             <StatusBarItem>
                 <TextBlock Name="lblCursorPosition" />
             </StatusBarItem>
-   </StatusBar>
-
-
+        </StatusBar>
     </DockPanel>
+    
 </Window>
