@@ -32,7 +32,7 @@
             <MenuItem Header="_Edit">
                 <MenuItem Command="Cut" >
                     <MenuItem.Icon>
-                        <Image Source="C:\Users\HP\Source\Repos\Complex_WPF_components\wpf_present\icons\cut.png" />
+                        <Image Source="D:\Projects .cs\wpf_present\wpf_present\icons\cut.png" />
                     </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Command="Copy" />
