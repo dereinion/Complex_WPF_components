@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,6 +26,7 @@ namespace wpf_present
         {
             InitializeComponent();
         }
+
         private void NewCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
             e.CanExecute = true;
@@ -52,6 +55,27 @@ namespace wpf_present
             }
             //status bar disappears code
         }
+
+        private void ToolbarOpenClick(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text files (*.txt)|*.txt";
+            if (openFileDialog.ShowDialog() == true)
+                TxtEditor.Text = File.ReadAllText(openFileDialog.FileName);
+        }
+        public void StatusBarSample()
+        {
+            InitializeComponent();
+        }
+
+        private void TxtEditor_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+            int row = TxtEditor.GetLineIndexFromCharacterIndex(TxtEditor.CaretIndex);
+            int col = TxtEditor.CaretIndex - TxtEditor.GetCharacterIndexFromLineIndex(row);
+            lblCursorPosition.Text = "Line " + (row + 1) + ", Char " + (col + 1);
+        }
+
    
     }
 }

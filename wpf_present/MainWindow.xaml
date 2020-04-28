@@ -48,12 +48,10 @@
             </MenuItem>
 
         </Menu>
-  
-
         <ToolBarTray DockPanel.Dock="Top">
-            <ToolBar Margin="0,0,-0.2,0">
-                <Button ToolTip="Open">
-                    <Image Source="C:\Users\HP\Source\Repos\Complex_WPF_components\wpf_present\icons\folder.png" />
+            <ToolBar>
+                <Button ToolTip="Open" Click="ToolbarOpenClick">
+                    <Image Source="D:\Projects .cs\wpf_present\wpf_present\icons\folder.png" />
                 </Button>
                 <Button ToolTip="Save">
                     <Image Source="C:\Users\HP\Source\Repos\Complex_WPF_components\wpf_present\icons\save.png" />
@@ -65,7 +63,8 @@
             </ToolBar>
         </ToolBarTray>
 
-        <TextBox AcceptsReturn="True" Name="txtEditor">
+
+        <TextBox AcceptsReturn="True" Name="TxtEditor" SelectionChanged="TxtEditor_SelectionChanged" >
             <TextBox.ContextMenu>
                 <ContextMenu>
                   <MenuItem Command="Cut">
@@ -82,6 +81,12 @@
                 </ContextMenu>
             </TextBox.ContextMenu>
         </TextBox>
+   <StatusBar Name="StatusBar" DockPanel.Dock="Bottom" Visibility="Collapsed">
+            <StatusBarItem>
+                <TextBlock Name="lblCursorPosition" />
+            </StatusBarItem>
+   </StatusBar>
+
 
     </DockPanel>
 </Window>
