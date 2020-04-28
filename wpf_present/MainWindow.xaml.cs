@@ -24,5 +24,34 @@ namespace wpf_present
         {
             InitializeComponent();
         }
+        private void NewCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void NewCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            txtEditor.Text = "Новий документ";
+        }
+        private void mnuOpen_Click(object sender, RoutedEventArgs e)
+        {
+
+            txtEditor.Text = "Sorry but this function is not available so far";
+        }
+        private void viewStsBar_Clicked(object sender, RoutedEventArgs e) {
+            if (StsBar.IsChecked==true)
+            {
+                
+                StsBar.IsChecked= false;
+                StsBar.IsCheckable = false;
+            }
+            else {
+                StsBar.IsChecked = true;
+                StsBar.IsCheckable = false;
+
+            }
+            //status bar disappears code
+        }
+   
     }
 }
