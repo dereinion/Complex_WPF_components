@@ -32,11 +32,10 @@
             </MenuItem>
 
         </Menu>
-        <TextBox AcceptsReturn="True" />
 
         <ToolBarTray DockPanel.Dock="Top">
             <ToolBar>
-                <Button ToolTip="Open">
+                <Button ToolTip="Open" Click="ToolbarOpenClick">
                     <Image Source="D:\Projects .cs\wpf_present\wpf_present\icons\folder.png" />
                 </Button>
                 <Button ToolTip="Save">
@@ -49,7 +48,11 @@
             </ToolBar>
         </ToolBarTray>
 
-        <TextBox AcceptsReturn="True" />
-
+        <StatusBar Name="StatusBar" DockPanel.Dock="Bottom" Visibility="Collapsed">
+            <StatusBarItem>
+                <TextBlock Name="lblCursorPosition" />
+            </StatusBarItem>
+        </StatusBar>
+        <TextBox AcceptsReturn="True" Name="TxtEditor" SelectionChanged="TxtEditor_SelectionChanged" />
     </DockPanel>
 </Window>
