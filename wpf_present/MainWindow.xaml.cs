@@ -27,6 +27,36 @@ namespace wpf_present
             InitializeComponent();
         }
 
+        private void NewCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void NewCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            txtEditor.Text = "Новий документ";
+        }
+        private void mnuOpen_Click(object sender, RoutedEventArgs e)
+        {
+
+            txtEditor.Text = "Sorry but this function is not available so far";
+        }
+        private void viewStsBar_Clicked(object sender, RoutedEventArgs e) {
+            if (StsBar.IsChecked==true)
+            {
+                StsBar.IsChecked= false;
+                StsBar.IsCheckable = false;
+                StatusBar.Visibility = Visibility.Collapsed;
+            }
+            else 
+            {
+                StsBar.IsChecked = true;
+                StsBar.IsCheckable = false;
+                StatusBar.Visibility = Visibility.Visible;
+            }
+            //status bar disappears code
+        }
+
         private void ToolbarOpenClick(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -41,12 +71,10 @@ namespace wpf_present
 
         private void TxtEditor_SelectionChanged(object sender, RoutedEventArgs e)
         {
-
             int row = TxtEditor.GetLineIndexFromCharacterIndex(TxtEditor.CaretIndex);
             int col = TxtEditor.CaretIndex - TxtEditor.GetCharacterIndexFromLineIndex(row);
             lblCursorPosition.Text = "Line " + (row + 1) + ", Char " + (col + 1);
         }
-
    
     }
 }
