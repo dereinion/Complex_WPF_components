@@ -34,12 +34,11 @@ namespace wpf_present
 
         private void NewCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            txtEditor.Text = "Новий документ";
+            TxtEditor.Text = "Новий документ";
         }
         private void mnuOpen_Click(object sender, RoutedEventArgs e)
         {
-
-            txtEditor.Text = "Sorry but this function is not available so far";
+            TxtEditor.Text = "Sorry but this function is not available so far";
         }
         private void viewStsBar_Clicked(object sender, RoutedEventArgs e) {
             if (StsBar.IsChecked==true)
