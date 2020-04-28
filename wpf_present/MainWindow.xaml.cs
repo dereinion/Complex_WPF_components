@@ -44,14 +44,15 @@ namespace wpf_present
         private void viewStsBar_Clicked(object sender, RoutedEventArgs e) {
             if (StsBar.IsChecked==true)
             {
-                
                 StsBar.IsChecked= false;
                 StsBar.IsCheckable = false;
+                StatusBar.Visibility = Visibility.Collapsed;
             }
-            else {
+            else 
+            {
                 StsBar.IsChecked = true;
                 StsBar.IsCheckable = false;
-
+                StatusBar.Visibility = Visibility.Visible;
             }
             //status bar disappears code
         }
@@ -70,12 +71,10 @@ namespace wpf_present
 
         private void TxtEditor_SelectionChanged(object sender, RoutedEventArgs e)
         {
-
             int row = TxtEditor.GetLineIndexFromCharacterIndex(TxtEditor.CaretIndex);
             int col = TxtEditor.CaretIndex - TxtEditor.GetCharacterIndexFromLineIndex(row);
             lblCursorPosition.Text = "Line " + (row + 1) + ", Char " + (col + 1);
         }
-
    
     }
 }
